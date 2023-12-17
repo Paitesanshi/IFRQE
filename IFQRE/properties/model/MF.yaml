@@ -1,0 +1,9 @@
+embedding_size: 64
+#distribution_type: 1
+#action_type: 2
+#unwillingness_type: 1
+#lambda: 0.001
+#learning_rate: 1
+#T: 2
+#L: 10000
+#M: 5

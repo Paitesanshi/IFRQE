@@ -1,0 +1,23 @@
+mf_embedding_size: 64
+mlp_embedding_size: 64
+mlp_hidden_size: [128,64]
+dropout_prob: 0.1
+mf_train: True
+mlp_train: True
+
+use_pretrain: False
+mf_pretrain_path: ~
+mlp_pretrain_path: ~
+
+
+# distribution_type: 1
+# action_type: 2 
+# unwillingness_type: 2
+# tao: 1
+# lambda: 0.1
+# K: 1
+# learning_rate: 1
+# T: 2
+# tau: 1
+# theta_num: 3
+

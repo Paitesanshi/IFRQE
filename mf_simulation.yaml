@@ -1,0 +1,71 @@
+# general
+gpu_id: 0
+use_gpu: True
+seed: 22202
+state: INFO
+reproducibility: True
+data_path: 'dataset/'
+checkpoint_dir: 'saved'
+show_progress: True
+save_dataset: False
+dataset_save_path: None
+save_dataloaders: False
+dataloaders_save_path: None
+log_wandb: False
+wandb_project: 'recbole'
+
+# training settings
+epochs: 50
+train_batch_size: 2048
+learner: adam
+learning_rate: 0.01
+neg_sampling:
+  uniform: 1
+eval_step: 1
+stopping_step: 50
+clip_grad_norm: ~
+# clip_grad_norm:  {'max_norm': 5, 'norm_type': 2}
+weight_decay: 0.0
+loss_decimal_place: 4
+require_pow: False
+
+#evaluation settings
+eval_args:
+  split: {'LS': 'valid_and_test'}
+  #split: {'RS':[0.8,0.1,0.1]}
+  group_by: user
+  order: TO
+  mode: uni99
+#eval_args:
+#  split: {'LS': 'valid_and_test'}
+#  group_by: user
+#  order: RO
+#  mode: uni99
+
+repeatable: False
+metrics: ["Recall","MRR","NDCG","Hit","Precision"]
+topk: [5]
+valid_metric: reward
+valid_metric_bigger: True
+eval_batch_size: 2048
+metric_decimal_place: 4
+
+#dataset settings
+load_col:
+  inter: ['user_id', 'item_id',rating,'timestamp']
+#game settings
+method_type: game
+sample_size: 1000
+distribution_type: 2
+action_type: 2
+unwillingness_type: 2
+lambda: 1
+T: 3
+L: 1000
+M: 1
+S: 10000
+mirror_rate: 0.08
+heiristic_save: 1
+damp: 0.1
+scale: 25
+recursion_depth: 5
