@@ -1,6 +1,6 @@
-# Recommendation with User Active Disclosing Willingness
+# Would You Like Your Data to Be Trained? A User Controllable Recommendation Framework
 
-A PyTorch implementation of Recommendation with User Active Disclosing Willingness
+A PyTorch implementation of Would You Like Your Data to Be Trained? A User Controllable Recommendation Framework (IFRQE) in AAAI 2024.
 
 [project page](https://paitesanshi.github.io/IFRQE/)
 
